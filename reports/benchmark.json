@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "frames": 60,
+    "resolution": "320x240",
+    "stride": 4,
+    "targets": 1,
+    "python": "3.13.14"
+  },
+  "speedup_vs_slowest": {
+    "naive": 1.0,
+    "vectorized": 2.74,
+    "cascade": 4.65
+  },
+  "results": [
+    {
+      "detector": "naive",
+      "frames": 60,
+      "realtime_capable_30fps": false,
+      "latency": {
+        "mean_ms": 57.666,
+        "p50_ms": 57.178,
+        "p95_ms": 60.452,
+        "p99_ms": 63.136,
+        "min_ms": 56.384,
+        "max_ms": 64.141,
+        "std_ms": 1.449,
+        "fps": 17.34
+      },
+      "accuracy": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1": 0.9744,
+        "mean_iou": 0.8933,
+        "tp": 57,
+        "fp": 0,
+        "fn": 3
+      },
+      "extra": {}
+    },
+    {
+      "detector": "vectorized",
+      "frames": 60,
+      "realtime_capable_30fps": true,
+      "latency": {
+        "mean_ms": 21.008,
+        "p50_ms": 20.421,
+        "p95_ms": 26.128,
+        "p99_ms": 29.162,
+        "min_ms": 18.37,
+        "max_ms": 30.831,
+        "std_ms": 2.281,
+        "fps": 47.6
+      },
+      "accuracy": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1": 0.9744,
+        "mean_iou": 0.8933,
+        "tp": 57,
+        "fp": 0,
+        "fn": 3
+      },
+      "extra": {}
+    },
+    {
+      "detector": "cascade",
+      "frames": 60,
+      "realtime_capable_30fps": true,
+      "latency": {
+        "mean_ms": 12.389,
+        "p50_ms": 12.225,
+        "p95_ms": 14.153,
+        "p99_ms": 17.003,
+        "min_ms": 10.589,
+        "max_ms": 19.866,
+        "std_ms": 1.248,
+        "fps": 80.72
+      },
+      "accuracy": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1": 0.9744,
+        "mean_iou": 0.8933,
+        "tp": 57,
+        "fp": 0,
+        "fn": 3
+      },
+      "extra": {
+        "stage1_rejection_rate": 0.9346
+      }
+    }
+  ]
+}
